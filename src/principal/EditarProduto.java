@@ -39,7 +39,7 @@ public class EditarProduto extends JFrame {
         JButton botaoSalvar = new JButton("Salvar");
         botaoSalvar.addActionListener(e -> {
             atualizarProduto();
-            dispose();
+            setVisible(false);
         });
         panel.add(botaoSalvar);
 
@@ -50,7 +50,7 @@ public class EditarProduto extends JFrame {
             if (confirmacao == JOptionPane.YES_OPTION) {
                 deletarProduto();
                 listaMateriais.atualizarTabela(); // Atualiza a tabela na janela principal
-                dispose(); // Fecha a janela após exclusão
+                setVisible(false); // Fecha a janela após exclusão
             }
         });
         panel.add(botaoDeletar);

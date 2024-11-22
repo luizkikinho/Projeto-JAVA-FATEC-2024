@@ -72,7 +72,7 @@ public class CadastrarProduto extends JDialog {
         botaoCancelar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose(); // Fecha a janela de cadastro
+            	setVisible(false);
             }
         });
     }
@@ -117,7 +117,7 @@ public class CadastrarProduto extends JDialog {
             }
 
             JOptionPane.showMessageDialog(this, "Produto cadastrado com sucesso!");
-            dispose(); // Fecha a janela de cadastro
+            this.dispose(); // Fecha a janela de cadastro
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Erro ao cadastrar o produto: " + ex.getMessage());

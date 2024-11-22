@@ -144,7 +144,7 @@ public class ExcluirUsuario extends JFrame {
         
         botaoExcluir.addActionListener(e -> {
      	   excluirUsuarioSelecionado();
-     	   dispose();
+     	   setVisible(false);
         });
         getContentPane().add(botaoExcluir); 
        

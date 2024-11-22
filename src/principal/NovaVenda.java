@@ -28,7 +28,7 @@ public class NovaVenda extends JFrame {
 
     public NovaVenda() {
         setTitle("Tela Principal");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(960, 630);
         setResizable(false);
         setLocationRelativeTo(null);
@@ -232,7 +232,7 @@ public class NovaVenda extends JFrame {
             modelItensVenda.addRow(new Object[]{nomeProduto, quantidade, precoProdutoSelecionado, total});
 
             atualizarTotalVenda();
-            frameSelecao.dispose();
+            frameSelecao.setVisible(false);
         } else {
             JOptionPane.showMessageDialog(this, "Selecione um produto e informe a quantidade", "Erro", JOptionPane.WARNING_MESSAGE);
         }
